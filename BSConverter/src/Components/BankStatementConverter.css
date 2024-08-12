@@ -1,0 +1,144 @@
+/* Background and container styling */
+body {
+  margin: 0;
+  font-family: 'Poppins', 'Courier New', Courier, monospace;
+  background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.converter-container {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  border-radius: 15px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  width: 550px; /* Reduced width */
+  margin: 0 auto;
+}
+
+.converter-title {
+  font-size: 2em; /* Slightly reduced font size */
+  color: #00ff99;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  animation: fadeInDown 1s ease-in-out;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* Custom file input styling */
+.file-label {
+  display: inline-block;
+  width: 100%;
+  cursor: pointer;
+  text-align: left;
+}
+
+.file-input {
+  display: none;
+}
+
+.file-custom {
+  display: block;
+  padding: 15px;
+  border: 2px solid #00ff99;
+  border-radius: 25px;
+  background-color: #1a1a1a;
+  color: #00ff99;
+  font-size: 1em;
+  outline: none;
+  transition: border-color 0.4s ease, color 0.4s ease;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+  cursor: pointer;
+}
+
+.file-custom:hover {
+  border-color: #009966;
+  color: #009966;
+}
+
+.file-name {
+  display: block;
+  margin-top: 10px;
+  color: #00ccff;
+  font-size: 0.9em;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* Convert button styling */
+.convert-button {
+  background: linear-gradient(135deg, #00ff99, #00ccff);
+  color: #ffffff;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 50px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.4s ease;
+  width: 100%;
+  margin-top: 20px;
+  animation: fadeInUp 1.2s ease-in-out;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.convert-button:hover {
+  background: linear-gradient(135deg, #00ccff, #00ff99);
+}
+
+.convert-button:disabled {
+  background: #004d4d;
+  cursor: not-allowed;
+}
+
+/* Error message styling */
+.error-message {
+  color: #ff3300;
+  margin-top: 20px;
+  font-size: 0.9em;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* Download link styling */
+.download-link {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #00ccff, #00ff99);
+  color: #ffffff;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: background 0.4s ease;
+  animation: fadeInUp 1.4s ease-in-out;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.download-link:hover {
+  background: linear-gradient(135deg, #00ff99, #00ccff);
+}
+
+/* Keyframes for animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
