@@ -24,7 +24,7 @@ const BankStatementConverter = () => {
     formData.append('file', file);
 
     try {
-      const response = await fetch('http://82.112.235.168:5000/bankstatementconverter', {
+      const response = await fetch('http://82.112.235.168:5000/api/bankstatementconverter', {
         method: 'POST',
         body: formData,
       });
@@ -33,6 +33,7 @@ const BankStatementConverter = () => {
         throw new Error('Failed to convert the file.');
       }
 
+      
       const blob = await response.blob();
       const url = window.URL.createObjectURL(blob);
       const a = document.createElement('a');
