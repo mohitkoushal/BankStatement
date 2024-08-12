@@ -24,7 +24,7 @@ const BankStatementConverter = () => {
     formData.append('file', file);
 
     try {
-      const response = await fetch('http://localhost:5000/api/bankstatementconverter', {
+      const response = await fetch('http://82.112.235.168:5000/bankstatementconverter', {
         method: 'POST',
         body: formData,
       });
