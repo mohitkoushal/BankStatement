@@ -17,7 +17,8 @@ const tabulaJarPath = path.join(__dirname, '..', 'uploads', 'tabula', 'tabula.ja
 const extractTableData = (pdfPath, csvPath) => {
     return new Promise((resolve, reject) => {
         // Full path to the Java executable
-        const javaPath = `"C:\\Program Files\\Java\\jdk-22\\bin\\java.exe"`; // Update if necessary
+        //const javaPath = `"C:\\Program Files\\Java\\jdk-22\\bin\\java.exe"`; // Update if necessary
+        const javaPath='java';
 
         // Command to extract tables from all pages using lattice mode, which works better for structured tables
         const cmd = `${javaPath} -jar "${tabulaJarPath}" -l --pages all -o "${csvPath}" "${pdfPath}"`;
